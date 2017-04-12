@@ -1,10 +1,10 @@
 package com.someone.commons.tools.json;
 
+import com.someone.commons.tools.json.base.FastJson;
 import com.someone.commons.tools.json.base.IJson;
-import com.someone.commons.tools.json.base.Jackjson;
 
 public class JsonUtil {
-	private static IJson instance = new Jackjson();
+	private static IJson instance = new FastJson();
 	
 	public static void setInstance(IJson instance){
 		if(instance == null){
