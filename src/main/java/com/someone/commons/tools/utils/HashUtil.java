@@ -2,7 +2,7 @@ package com.someone.commons.tools.utils;
 
 import java.security.MessageDigest;
 
-public class HashKit {
+public class HashUtil {
 	
 	private static final java.security.SecureRandom random = new java.security.SecureRandom();
 	private static final char[] HEX_DIGITS = "0123456789abcdef".toCharArray();

@@ -59,7 +59,7 @@ public class Commons {
 		} else {
 			key.append(")");
 		}
-		String md5CacheKey = HashKit.md5(key.toString());
+		String md5CacheKey = HashUtil.md5(key.toString());
 		log.info("生成的cache key="+md5CacheKey+", 原缓存值为："+key.toString());
 		return md5CacheKey;
 	}
