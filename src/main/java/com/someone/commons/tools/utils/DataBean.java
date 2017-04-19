@@ -2,7 +2,7 @@ package com.someone.commons.tools.utils;
 
 import java.io.Serializable;
 
-public class DataObj<T> implements Serializable {
+public class DataBean<T> implements Serializable {
 	private static final long serialVersionUID = 7933714516649991146L;
 	
 	public static final int CODE_SUCCESS = 0;
@@ -13,13 +13,13 @@ public class DataObj<T> implements Serializable {
 	private T data;
 	private String msg = "";
 	
-	public DataObj() {
+	public DataBean() {
 	}
 	/**
 	 * 初始化一个失败的DataBean
 	 * @param msg
 	 */
-	public DataObj(String msg) {
+	public DataBean(String msg) {
 		this.code = CODE_FAIL;
 		this.msg = msg;
 	}
@@ -28,10 +28,10 @@ public class DataObj<T> implements Serializable {
 	 * 初始化一个给定code的DataBean
 	 * @param msg
 	 */
-	public DataObj(int code) {
+	public DataBean(int code) {
 		this.code = code;
 	}
-	public DataObj(int code, String msg) {
+	public DataBean(int code, String msg) {
 		this.code = code;
 		this.msg = msg;
 	}
@@ -41,34 +41,34 @@ public class DataObj<T> implements Serializable {
 		return this.code == successCode;
 	}
 	
-	public DataObj<T> setData(T data) {
+	public DataBean<T> setData(T data) {
 		this.data = data;
 		return this;
 	}
-	public DataObj<T> setData(int code,T data) {
+	public DataBean<T> setData(int code,T data) {
 		this.code = code;
 		this.data = data;
 		return this;
 	}
-	public DataObj<T> setSuccessData(T data){
+	public DataBean<T> setSuccessData(T data){
 		this.code = CODE_SUCCESS;
 		this.data = data;
 		return this;
 	}
-	public DataObj<T> setSuccessData(int code, T data){
+	public DataBean<T> setSuccessData(int code, T data){
 		this.code = code;
 		this.successCode = code;
 		this.data = data;
 		return this;
 	}
 	
-	public DataObj<T> setErrorMsg(String msg){
+	public DataBean<T> setErrorMsg(String msg){
 		this.code = CODE_FAIL;
 		this.msg = msg;
 		return this;
 	}
 	
-	public DataObj<T> setErrorMsg(int code, String msg){
+	public DataBean<T> setErrorMsg(int code, String msg){
 		this.code = code;
 		this.msg = msg;
 		return this;
