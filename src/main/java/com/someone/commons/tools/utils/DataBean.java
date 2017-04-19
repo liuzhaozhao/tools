@@ -36,6 +36,11 @@ public class DataBean<T> implements Serializable {
 		this.msg = msg;
 	}
 	
+	public static <T> DataBean<T> getSuccessData(T data){
+		DataBean<T> obj = new DataBean<T>(CODE_SUCCESS);
+		obj.setSuccessData(data);
+		return obj;
+	}
 	
 	public boolean isSuccessCode() {
 		return this.code == successCode;
