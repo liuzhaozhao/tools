@@ -56,11 +56,12 @@ public class AES {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		String pass = "111111";
-		String key = "078a34201e6d3ea5";// 必须为16位
-		String encryptVal = AES.encrypt(pass, key);
+		System.err.println(System.currentTimeMillis()/1000);
+		String pass = "123456";
+		String encryptKey = "0123456789012345";// 必须为16位
+		String encryptVal = AES.encrypt(pass, encryptKey);
 		System.err.println(pass+"加密值后为："+encryptVal);
-		String decryptVal = AES.decrypt(encryptVal, key);
+		String decryptVal = AES.decrypt(encryptVal, encryptKey);
 		System.err.println(encryptVal+"解密值后为："+decryptVal);
 	}
 }

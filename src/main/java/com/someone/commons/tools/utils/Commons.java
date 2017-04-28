@@ -37,11 +37,12 @@ public class Commons {
 	 */
 	public static String generEhcacheKey(Object... args){
 		StackTraceElement[] elements = Thread.currentThread().getStackTrace();
-		String keyPrefix = UUID.randomUUID().toString().replaceAll("-", "");
+		String keyPrefix = null;
 		if(elements.length > 2){// 获取调用方的类名及方法名，作为key的前缀，防止key重复
 			StackTraceElement element = elements[2];
 			keyPrefix = element.getClassName()+"."+ element.getMethodName();
 		}else{// 通常情况下，length大于2的
+			keyPrefix = UUID.randomUUID().toString().replaceAll("-", "");
 			log.warn("生成cacheKey时，调用方参数有误："+JsonUtil.toStr(elements));
 		}
 		
