@@ -49,7 +49,7 @@ public class Commons {
 		String split = ",";
 		StringBuffer key = new StringBuffer(keyPrefix + "(");
 		for(Object arg : args) {
-			String val = "NULL";
+			String val = "null";
 			if(arg != null) {
 				val = JsonUtil.toStr(arg);
 			}
