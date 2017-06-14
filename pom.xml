@@ -156,6 +156,36 @@
 <!-- 		    <version>3.2.2</version> -->
 <!-- 		</dependency> -->
 
+		<dependency>
+		    <groupId>edu.stanford.nlp</groupId>
+		    <artifactId>stanford-corenlp</artifactId>
+		    <version>3.7.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+		<dependency>
+		    <groupId>io.netty</groupId>
+		    <artifactId>netty-all</artifactId>
+		    <version>4.1.11.Final</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.voovan/voovan-framework -->
+		<dependency>
+		    <groupId>org.voovan</groupId>
+		    <artifactId>voovan-framework</artifactId>
+		    <version>1.5.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.esotericsoftware/kryo -->
+		<dependency>
+		    <groupId>com.esotericsoftware</groupId>
+		    <artifactId>kryo</artifactId>
+		    <version>4.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/de.ruedigermoeller/fst -->
+		<dependency>
+		    <groupId>de.ruedigermoeller</groupId>
+		    <artifactId>fst</artifactId>
+		    <version>2.50</version>
+		</dependency>
 		
 	</dependencies>
 
